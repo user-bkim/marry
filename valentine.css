@@ -1,0 +1,383 @@
+/* Valentine's Day Special Styling */
+
+.valentine-body {
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe5f1 50%, #fff0f8 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.valentine-nav {
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+}
+
+/* Floating Hearts Background */
+.hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float-hearts 15s infinite ease-in-out;
+}
+
+.heart-1 { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+.heart-2 { left: 20%; animation-delay: 2s; animation-duration: 15s; }
+.heart-3 { left: 30%; animation-delay: 4s; animation-duration: 13s; }
+.heart-4 { left: 50%; animation-delay: 1s; animation-duration: 14s; }
+.heart-5 { left: 60%; animation-delay: 3s; animation-duration: 16s; }
+.heart-6 { left: 70%; animation-delay: 5s; animation-duration: 11s; }
+.heart-7 { left: 80%; animation-delay: 2.5s; animation-duration: 13s; }
+.heart-8 { left: 90%; animation-delay: 4.5s; animation-duration: 15s; }
+
+@keyframes float-hearts {
+    0% {
+        bottom: -10%;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        bottom: 110%;
+        transform: translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Valentine Main */
+.valentine-main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Valentine Hero */
+.valentine-hero {
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.valentine-content {
+    position: relative;
+    z-index: 2;
+}
+
+.love-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30% {
+        transform: scale(1.05);
+    }
+    20%, 40% {
+        transform: scale(0.98);
+    }
+}
+
+.love-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.heart-divider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.heart-icon {
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.heart-icon:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.heart-icon:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Love Message */
+.love-message {
+    padding: 4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.message-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-card {
+    background: linear-gradient(135deg, #fff 0%, #ffe9f5 100%);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+    border: 3px solid #ffc0d3;
+}
+
+.message-card h2 {
+    color: #c44569;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.message-card p {
+    color: #555;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    font-style: italic;
+    color: #c44569;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+/* Love Reasons */
+.love-reasons {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.reasons-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #c44569;
+    margin-bottom: 3rem;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reason-card {
+    background: linear-gradient(135deg, #fff0f8 0%, #ffe5f1 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(196, 69, 105, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ffc0d3;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(196, 69, 105, 0.4);
+}
+
+.reason-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+    color: #c44569;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.reason-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Photo Memories */
+.photo-memories {
+    padding: 4rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.photo-memories h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #c44569;
+    margin-bottom: 1rem;
+}
+
+.memories-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.photo-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.photo-memories .photo-placeholder {
+    background: linear-gradient(135deg, #ffe5f1 0%, #ffc0d3 100%);
+    height: 300px;
+    border-radius: 15px;
+    border: 3px dashed #ff6b9d;
+}
+
+/* Valentine Quote */
+.valentine-quote {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.valentine-quote blockquote {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.valentine-quote blockquote p {
+    color: white;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.valentine-quote blockquote footer {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Love Finale */
+.love-finale {
+    padding: 5rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+}
+
+.finale-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.finale-title {
+    font-size: 2.5rem;
+    color: #c44569;
+    margin-bottom: 1.5rem;
+}
+
+.finale-message {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.heart-pulse {
+    font-size: 5rem;
+    animation: pulse-heart 1.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes pulse-heart {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Valentine Footer */
+.valentine-footer {
+    background: linear-gradient(135deg, #c44569 0%, #8e2e4d 100%);
+}
+
+/* Responsive Design for Valentine's Page */
+@media (max-width: 768px) {
+    .love-title {
+        font-size: 2.5rem;
+    }
+
+    .love-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .message-card {
+        padding: 2rem;
+    }
+
+    .message-card p {
+        font-size: 1rem;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-placeholder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valentine-quote blockquote p {
+        font-size: 1.1rem;
+    }
+
+    .finale-title {
+        font-size: 1.8rem;
+    }
+
+    .finale-message {
+        font-size: 1.2rem;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+    }
+}
